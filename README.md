@@ -1,46 +1,66 @@
-# 🤖 ERIC Robotics — Insight.IO Mission Control Dashboard
+<div align="center">
 
-> A high-performance, self-hosted Autonomous Mobile Robot (AMR) mission control dashboard reproducing the **Insight.IO** interface. Built with React 19, TypeScript, Three.js (3D SLAM PCD Point Cloud), and native ROS 2 WebSocket Bridge (`roslibjs`).
+  <img src="public/assets/robot_logo.svg" alt="ERIC Robotics Logo" width="76" height="76" />
 
-[![React](https://img.shields.io/badge/React-19.3.1-blue.svg?logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue.svg?logo=typescript)](https://www.typescriptlang.org/)
-[![Three.js](https://img.shields.io/badge/Three.js-0.186.1-black.svg?logo=three.js)](https://threejs.org/)
-[![ROS 2](https://img.shields.io/badge/ROS%202-Humble%20%7C%20Iron%20%7C%20Jazzy-orange.svg?logo=ros)](https://docs.ros.org/)
-[![Self-Hosted](https://img.shields.io/badge/Self--Hosted-100%25%20Offline-success.svg)](http://localhost:5173)
-[![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+  # ERIC ROBOTICS &bull; INSIGHT.IO
+  ### Autonomous Mobile Robot (AMR) Mission Control & 3D Telemetry Platform
+
+  [![React](https://img.shields.io/badge/React-19.3-1e293b?style=for-the-badge&logo=react&logoColor=38bdf8)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-6.0-1e293b?style=for-the-badge&logo=typescript&logoColor=38bdf8)](https://www.typescriptlang.org/)
+  [![Three.js](https://img.shields.io/badge/Three.js-WebGL-1e293b?style=for-the-badge&logo=three.js&logoColor=ffffff)](https://threejs.org/)
+  [![ROS 2](https://img.shields.io/badge/ROS_2-Humble_|_Iron_|_Jazzy-1e293b?style=for-the-badge&logo=ros&logoColor=f97316)](https://docs.ros.org/)
+  [![Docker](https://img.shields.io/badge/Docker-Multi--Stage-1e293b?style=for-the-badge&logo=docker&logoColor=38bdf8)](https://www.docker.com/)
+  [![Self-Hosted](https://img.shields.io/badge/Offline-100%25_Self--Contained-10b981?style=for-the-badge)](http://localhost:5173)
+
+  <p align="center">
+    <strong>A production-grade, self-hosted mission control dashboard faithfully engineered for ERIC Robotics AMR platforms.</strong><br/>
+    Featuring interactive 3D SLAM point clouds, real-time optical feed streaming, smooth 450ms PiP viewport swap, industrial teleoperation, safety-latched E-Stop, and native ROS 2 WebSocket integration.
+  </p>
+
+</div>
 
 ---
 
-## 🌟 Overview & Objectives
+## Candidate Information
 
-This project is a faithful, production-grade recreation of the **ERIC Robotics Insight.IO** dashboard showcased in `demo.gif`. It meets all assignment specifications:
-- **3D SLAM Map View**: Interactive Three.js scene rendering an occupancy grid, extruded walls, pink warehouse zones (*Meeting Room*, *Workshop*, *Lab Cleanroom*, *Rest Area*), billboarded text, and a `.pcd` point cloud with red LiDAR obstacle clusters.
-- **Camera Feed View**: High-throughput optical camera stream with crosshair HUD, telemetry overlay, and a codec-agnostic canvas frame streamer ensuring 100% offline playback.
-- **Picture-in-Picture (PiP) Swap Engine**: Smooth 450ms cubic-bezier transition between the 3D Map and Camera feed, accessible via the bottom-left thumbnail card or the top mode switcher.
+- **Full Name**: Yash Agrawal
+- **Email ID**: agrawalyash994@gmail.com
+- **Contact Number**: +91 6353902576
+- **GitHub Repository**: [https://github.com/yash9025/Eric-Robotics](https://github.com/yash9025/Eric-Robotics)
+
+---
+
+## Visual Gallery & Operational Telemetry
+
+| 1. 3D SLAM Map & PCD Point Cloud | 2. Camera View & PiP Swap Engine |
+| :---: | :---: |
+| ![3D SLAM Dashboard](docs/screenshots/01_dashboard_3d_map.png) | ![Camera View Primary](docs/screenshots/02_camera_pip_swap.png) |
+
+| 3. Live ROS 2 Bridge WebSocket Diagnostics | 4. Quick Goal Trajectory Dispatch |
+| :---: | :---: |
+| ![ROS 2 Bridge Connected](docs/screenshots/03_ros2_bridge_connected.png) | ![Quick Goal Navigation](docs/screenshots/04_quick_goal_trajectory.png) |
+
+<div align="center">
+  <p><strong>5. Industrial Safety Emergency Stop (Hardware Latch & Screen-Edge Hazard Flashing)</strong></p>
+  <img src="docs/screenshots/05_estop_hazard_latch.png" width="85%" alt="E-Stop Hazard Latch" />
+</div>
+
+---
+
+## System Overview
+
+This implementation represents a faithful recreation of the **ERIC Robotics Insight.IO** dashboard. Designed from the ground up for industrial fleet deployments, the application provides real-time situational awareness, manual overrides, and autonomous supervision:
+
+- **3D SLAM Digital Twin**: Three.js isometric rendering engine displaying an occupancy floor grid, extruded warehouse perimeter walls, translucent polygonal functional zones (*Workshop*, *Meeting Room*, *Lab Cleanroom*, *Rest Area*) with billboarded labels, and a high-density `.pcd` LiDAR obstacle point cloud.
+- **Resilient Optical Stream**: High-throughput optical camera stream featuring a canvas image-sequence pipeline (guaranteeing 100% offline playback across all operating systems without external codec dependencies) overlaid with an optical reticle HUD indicating yaw, pitch, roll, and latency.
+- **Picture-in-Picture (PiP) Swap Engine**: Seamless 450ms cubic-bezier transition mechanism allowing operators to swap the primary viewport and thumbnail feed via the bottom-left thumbnail card or the top mode switcher.
 - **Industrial Teleoperation**: Responsive 4-axis D-Pad and full keyboard binding (`W`, `A`, `S`, `D` and arrow keys) publishing `/cmd_vel` velocity twists.
-- **Emergency Stop Safety Latch**: Industrial E-Stop button with safety latching, full-viewport flashing hazard border, and hardware de-energization banner.
+- **Emergency Stop Safety Interlock**: Industrial E-Stop button with safety latching, full-viewport flashing hazard border, and hardware de-energization banner.
 - **Dual-Mode Data Architecture**: Runs 100% offline out-of-the-box using an internal kinematic physics engine, while supporting live connection to ROS 2 via `ws://localhost:9090`.
 
 ---
 
-## 📸 Visual Previews
-
-| **1. 3D SLAM Map & PCD Point Cloud** | **2. Camera View & PiP Swap Engine** |
-| :---: | :---: |
-| ![3D SLAM Dashboard](docs/screenshots/01_dashboard_3d_map.png) | ![Camera View Primary](docs/screenshots/02_camera_pip_swap.png) |
-
-| **3. Live ROS 2 Bridge WebSocket Diagnostics** | **4. Quick Goal Trajectory Dispatch** |
-| :---: | :---: |
-| ![ROS 2 Bridge Connected](docs/screenshots/03_ros2_bridge_connected.png) | ![Quick Goal Navigation](docs/screenshots/04_quick_goal_trajectory.png) |
-
-<p align="center">
-  <em><strong>5. Industrial Safety Emergency Stop (Hardware Latch & Flashing Hazard Border)</strong></em><br/>
-  <img src="docs/screenshots/05_estop_hazard_latch.png" width="85%" alt="E-Stop Hazard Latch" />
-</p>
-
----
-
-## 🏗️ System Architecture
+## Architecture & Data Flow
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -93,9 +113,9 @@ This project is a faithful, production-grade recreation of the **ERIC Robotics I
 
 ---
 
-## 🚀 Quick Start (Self-Hosting)
+## Deployment & Self-Hosting
 
-You can launch the dashboard using any of the following 4 self-hosted methods:
+The dashboard is self-hosted and requires zero external network calls. You can launch it using any of the following 4 methods:
 
 ### Method 1: Local Development Server (Recommended)
 Prerequisites: Node.js 18+ and npm.
@@ -149,13 +169,13 @@ npm run dev
 
 ---
 
-## 📡 ROS 2 Integration & Topics
+## ROS 2 Integration & Communication Protocol
 
-The dashboard integrates with ROS 2 using `roslib` over standard WebSocket (`rosbridge_websocket` on port 9090).
+The dashboard integrates with ROS 2 through `roslib` over standard WebSocket (`rosbridge_websocket` on port 9090).
 
 ### Supported Topics
 
-| Topic | ROS Message Type | Direction | Description |
+| Topic | ROS Message Type | Direction | Functional Purpose |
 | :--- | :--- | :---: | :--- |
 | `/odom` | `nav_msgs/Odometry` | Sub | Updates AMR 3D position $(x, y)$ and yaw orientation in Three.js |
 | `/battery_state` | `sensor_msgs/BatteryState` | Sub | Live battery percentage and discharge telemetry in top capsule |
@@ -164,7 +184,7 @@ The dashboard integrates with ROS 2 using `roslib` over standard WebSocket (`ros
 | `/goal_pose` | `geometry_msgs/PoseStamped` | Pub | Dispatches coordinate goal targets from Quick Goal modal |
 | `/emergency_stop` | `std_msgs/Bool` | Pub | Publishes `true`/`false` hardware safety latch command |
 
-### Connecting to a Native ROS 2 Robot
+### Connecting to a Native ROS 2 Core
 
 If you have a native ROS 2 distribution (Humble, Iron, or Jazzy) installed:
 
@@ -183,11 +203,11 @@ ros2 bag play my_warehouse_run.db3
 
 ---
 
-## 🎮 Key Dashboard Features
+## Core Operational Capabilities
 
 ### 1. Interactive 3D SLAM Map & PCD Point Cloud
 - **Three.js Isometric Scene**: Restricted OrbitControls prevent disorientation while allowing smooth panning, orbiting, and zooming.
-- **PCD Point Cloud**: Loaded via `PCDLoader` reading [`public/assets/warehouse_slam.pcd`](file:///c:/Users/YASH/Desktop/Eric%20Robotics/public/assets/warehouse_slam.pcd) with red LiDAR obstacle return points along corridor walls.
+- **PCD Point Cloud**: Loaded via `PCDLoader` reading [`public/assets/warehouse_slam.pcd`](public/assets/warehouse_slam.pcd) with red LiDAR obstacle return points along corridor walls.
 - **Extruded 3D Floor Plan**: Perimeter walls, door frames, and translucent pink zones (*Workshop*, *Meeting Room*, *Lab Cleanroom*, *Rest Area*) with billboard text.
 - **Dynamic 3D Rover**: Chassis, wheels, rotating LiDAR turret, heading vector, and animated ping beacons.
 
@@ -208,7 +228,7 @@ ros2 bag play my_warehouse_run.db3
 
 ---
 
-## 📁 Repository Structure
+## Project Structure
 
 ```
 Eric Robotics/
@@ -250,7 +270,7 @@ Eric Robotics/
 
 ---
 
-## 🧪 Verification & Evaluation Checklist
+## Quality Assurance & Verification Matrix
 
 - [x] **Exact UI/UX Match**: Recreates sidebar, top floating capsule, mission pods, zoom slider, 3D map, and teleop controls from `demo.gif`.
 - [x] **3D Map with PCD Point Cloud**: Loads and displays `.pcd` LiDAR points with OrbitControls, extruded walls, and warehouse zone overlays.
@@ -260,16 +280,8 @@ Eric Robotics/
 - [x] **100% Offline Self-Hosting**: Zero CDN dependencies; self-contained fonts, SVGs, 3D assets, point clouds, and video frames.
 - [x] **Multi-Platform Deployment**: Tested and verified on Vite local dev server, Python static server, and Docker container.
 
-## 👤 Candidate Details
-
-- **Full Name**: Yash Agrawal
-- **Email ID**: agrawalyash994@gmail.com
-- **Contact Number**: +91 6353902576
-- **GitHub Repository**: [https://github.com/yash9025/Eric-Robotics](https://github.com/yash9025/Eric-Robotics)
-
 ---
 
-## 👥 Acknowledgments
+## Technical Acknowledgments
 
 - **Reference**: ERIC Robotics Insight.IO Dashboard Design Specification.
-
