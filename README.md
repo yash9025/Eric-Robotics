@@ -1,7 +1,5 @@
 <div align="center">
 
-  <img src="public/assets/robot_logo.svg" alt="ERIC Robotics Logo" width="76" height="76" />
-
   # ERIC ROBOTICS &bull; INSIGHT.IO
   ### Autonomous Mobile Robot (AMR) Mission Control & 3D Telemetry Platform
 
