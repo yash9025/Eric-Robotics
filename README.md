@@ -260,9 +260,16 @@ Eric Robotics/
 - [x] **100% Offline Self-Hosting**: Zero CDN dependencies; self-contained fonts, SVGs, 3D assets, point clouds, and video frames.
 - [x] **Multi-Platform Deployment**: Tested and verified on Vite local dev server, Python static server, and Docker container.
 
+## 👤 Candidate Details
+
+- **Full Name**: Yash Agrawal
+- **Email ID**: agrawalyash994@gmail.com
+- **Contact Number**: `<INSERT_YOUR_CONTACT_NUMBER_HERE>`
+- **GitHub Repository**: [https://github.com/yash9025/Eric-Robotics](https://github.com/yash9025/Eric-Robotics)
+
 ---
 
-## 👥 Authors & Acknowledgments
+## 👥 Acknowledgments
 
-- **Author**: Candidate for ERIC Robotics Software Engineering Assignment.
 - **Reference**: ERIC Robotics Insight.IO Dashboard Design Specification.
+
