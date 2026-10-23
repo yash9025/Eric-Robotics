@@ -264,7 +264,7 @@ Eric Robotics/
 
 - **Full Name**: Yash Agrawal
 - **Email ID**: agrawalyash994@gmail.com
-- **Contact Number**: `<INSERT_YOUR_CONTACT_NUMBER_HERE>`
+- **Contact Number**: +91 6353902576
 - **GitHub Repository**: [https://github.com/yash9025/Eric-Robotics](https://github.com/yash9025/Eric-Robotics)
 
 ---
