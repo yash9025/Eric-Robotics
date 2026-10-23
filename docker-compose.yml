@@ -1,0 +1,22 @@
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: insight_io_dashboard
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    depends_on:
+      - ros-bridge
+
+  ros-bridge:
+    image: node:20-alpine
+    container_name: insight_io_ros_bridge
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: sh -c "npm install && node server/mock_ros_bridge.js"
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
