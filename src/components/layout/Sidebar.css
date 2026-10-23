@@ -1,0 +1,101 @@
+.eric-sidebar {
+  width: 60px;
+  height: 100vh;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  z-index: 50;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding-bottom: 12px;
+}
+
+.brand-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  font-size: 7.5px;
+  font-weight: 700;
+  color: var(--text-light-muted);
+  letter-spacing: 0.22em;
+  margin-top: 2px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-button {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.nav-button:hover {
+  background: var(--bg-sidebar-hover);
+  color: #F8FAFC;
+}
+
+.nav-button.active {
+  background: var(--bg-sidebar-active);
+  color: #FFFFFF;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
+}
+
+.active-pill-indicator {
+  position: absolute;
+  left: -9px;
+  width: 3px;
+  height: 20px;
+  border-radius: 0 4px 4px 0;
+  background-color: var(--accent-blue);
+  box-shadow: 0 0 8px var(--accent-blue-glow);
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.profile-button {
+  color: #64748B;
+  border-radius: 50%;
+}
+
+.profile-button:hover {
+  color: #F8FAFC;
+  background: rgba(255, 255, 255, 0.08);
+}

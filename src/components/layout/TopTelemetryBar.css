@@ -1,0 +1,120 @@
+.top-telemetry-container {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 40;
+  pointer-events: auto;
+}
+
+.telemetry-capsule {
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  gap: 12px;
+  background: rgba(13, 22, 41, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.telemetry-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.telemetry-value {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.battery-icon-wrapper {
+  display: flex;
+  align-items: center;
+  color: #10B981;
+}
+
+.signal-icon {
+  color: #FBBF24;
+}
+
+.ros-connected-icon {
+  color: #10B981 !important;
+}
+
+.clickable-ros-item {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  transition: all var(--transition-fast);
+}
+
+.clickable-ros-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.04);
+}
+
+.telemetry-label {
+  color: #F8FAFC;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.telemetry-text {
+  color: #94A3B8;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.telemetry-status {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.status-danger-text {
+  color: #EF4444 !important;
+  font-weight: 700;
+}
+
+.telemetry-separator {
+  width: 1px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.view-selector-pill {
+  padding: 6px 20px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: rgba(17, 24, 39, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-selector-pill:hover {
+  background: rgba(31, 41, 55, 0.95);
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.view-selector-pill:active {
+  transform: translateY(0);
+}

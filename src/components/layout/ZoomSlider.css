@@ -1,0 +1,80 @@
+.zoom-slider-container {
+  position: absolute;
+  bottom: 30px;
+  left: 80px; /* Positioned just right of sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 40;
+  pointer-events: auto;
+}
+
+.zoom-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background-color: #0E1626;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: all var(--transition-fast);
+}
+
+.zoom-btn:hover {
+  background-color: #1F2937;
+  transform: scale(1.1);
+}
+
+.zoom-btn:active {
+  transform: scale(0.95);
+}
+
+.zoom-track-wrapper {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+}
+
+/* Custom Vertical Range Input */
+.zoom-range-input {
+  writing-mode: vertical-lr;
+  direction: rtl;
+  width: 6px;
+  height: 80px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(14, 22, 38, 0.35);
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.zoom-range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0E1626;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: grab;
+  transition: transform var(--transition-fast);
+}
+
+.zoom-range-input::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.zoom-range-input::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.1);
+}
